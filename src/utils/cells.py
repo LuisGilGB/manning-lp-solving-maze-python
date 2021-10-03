@@ -1,6 +1,6 @@
-from src.classes.CellType import CellType
+from src.classes.enums.CellType import CellType
 
-cellTypeChar = {
+cellTypeCharMap = {
     '#': CellType.WALL,
     'o': CellType.PLAYER,
     'x': CellType.EXIT,
@@ -11,4 +11,4 @@ DEFAULT_CELL_TYPE = CellType.WALL
 
 
 def getCellTypeFromChar(char):
-    return cellTypeChar[char] or DEFAULT_CELL_TYPE
+    return cellTypeCharMap[char] or DEFAULT_CELL_TYPE
